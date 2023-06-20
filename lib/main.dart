@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       initialRoute: 'botones',
       routes: {
-        'basico': (BuildContext context) => BasicoPage(),
+        'basico': (BuildContext context) => BasicoPage(), // alex cambia el fallo
       },
     );
   }
