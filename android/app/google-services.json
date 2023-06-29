@@ -29,6 +29,7 @@
             {
               "client_id": "518787343362-k5ki84eboqq22ot5qu2ec2tm347eao8u.apps.googleusercontent.com",
               "client_type": 3
+<<<<<<< HEAD
             },
             {
               "client_id": "518787343362-3ieov2n0ki6j928r9cto85vm1hgs3d60.apps.googleusercontent.com",
@@ -36,6 +37,8 @@
               "ios_info": {
                 "bundle_id": "com.example.asuntosuomi"
               }
+=======
+>>>>>>> 86fe13131a5d55ec54925b7253678a9a104779e6
             }
           ]
         }
