@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:myapp/core/app_export.dart';
+import 'package:myapp/utils.dart';
 import 'package:myapp/widgets/custom_button.dart';
 import 'package:myapp/widgets/custom_icon_button.dart';
 import 'package:myapp/widgets/custom_text_form_field.dart';
@@ -13,7 +15,7 @@ import 'package:flutter/material.dart';
 class RegisterFormScreen extends StatelessWidget {
   TextEditingController fullnameController = TextEditingController();
 
-  TextEditingController youremailController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
 
   TextEditingController passwordController = TextEditingController();
 
@@ -68,7 +70,7 @@ class RegisterFormScreen extends StatelessWidget {
                               BoxConstraints(maxHeight: getVerticalSize(48))),
                       CustomTextFormField(
                           focusNode: FocusNode(),
-                          controller: youremailController,
+                          controller: emailController,
                           hintText: "Your Email",
                           margin: getMargin(top: 8),
                           padding: TextFormFieldPadding.PaddingT14,
@@ -111,10 +113,13 @@ class RegisterFormScreen extends StatelessWidget {
                           prefixConstraints:
                               BoxConstraints(maxHeight: getVerticalSize(48)),
                           isObscureText: true),
-                      CustomButton(
-                          height: getVerticalSize(57),
-                          text: "Sign Up",
-                          margin: getMargin(top: 20)),
+                      ElevatedButton(
+                        child: Text('Registrarse'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                        ),
+                        onPressed: signUp,
+                      ),
                       GestureDetector(
                           onTap: () {
                             onTapTxtHaveanaccount(context);
@@ -157,5 +162,15 @@ class RegisterFormScreen extends StatelessWidget {
 
   onTapTxtHaveanaccount(BuildContext context) {
     Navigator.popAndPushNamed(context, AppRoutes.loginScreen);
+  }
+
+  Future signUp() async {
+    try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: emailController.text.trim(),
+          password: passwordController.text.trim());
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
   }
 }

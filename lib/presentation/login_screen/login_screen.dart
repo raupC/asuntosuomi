@@ -1,4 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:myapp/core/app_export.dart';
+import 'package:myapp/main.dart';
+import 'package:myapp/utils.dart';
 import 'package:myapp/widgets/custom_button.dart';
 import 'package:myapp/widgets/custom_icon_button.dart';
 import 'package:myapp/widgets/custom_text_form_field.dart';
@@ -6,10 +9,24 @@ import 'package:flutter/material.dart';
 // ignore_for_file: must_be_immutable
 
 // ignore_for_file: must_be_immutable
-class LoginScreen extends StatelessWidget {
+
+class LoginWidget extends StatefulWidget {
+  @override
+  LoginScreen createState() => LoginScreen();
+}
+
+class LoginScreen extends State<LoginWidget> {
   TextEditingController emailController = TextEditingController();
 
   TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,10 +90,13 @@ class LoginScreen extends StatelessWidget {
                           prefixConstraints:
                               BoxConstraints(maxHeight: getVerticalSize(48)),
                           isObscureText: true),
-                      CustomButton(
-                          height: getVerticalSize(57),
-                          text: "Iniciar Sesión",
-                          margin: getMargin(top: 16)),
+                      ElevatedButton(
+                        child: Text('Iniciar sesión'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                        ),
+                        onPressed: signIn,
+                      ),
                       Padding(
                           padding: getPadding(top: 18),
                           child: Row(
@@ -196,5 +216,16 @@ class LoginScreen extends StatelessWidget {
 
   onTapTxtDonthaveana(BuildContext context) {
     Navigator.pushNamed(context, AppRoutes.registerFormScreen);
+  }
+
+  Future signIn() async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text.trim(),
+          password: passwordController.text.trim());
+    } on FirebaseAuthException catch (e) {
+      print(e);
+      Utils.showSnackBar(e.message);
+    }
   }
 }

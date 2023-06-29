@@ -117,7 +117,7 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> routes = {
     splashScreen: (context) => SplashScreen(),
-    loginScreen: (context) => LoginScreen(),
+    loginScreen: (context) => LoginWidget(),
     registerFormScreen: (context) => RegisterFormScreen(),
     dashboardContainerScreen: (context) => DashboardContainerScreen(),
     offerScreen: (context) => OfferScreen(),

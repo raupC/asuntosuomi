@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "518787343362",
+    "project_id": "asuntosuomi-d1599",
+    "storage_bucket": "asuntosuomi-d1599.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518787343362:android:330d6984e15df4fdfff31b",
+        "android_client_info": {
+          "package_name": "com.example.asuntosuomi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518787343362-k5ki84eboqq22ot5qu2ec2tm347eao8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzg0ZXtFE1CF_SBosne7L2ScRwBi8D1Ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518787343362-k5ki84eboqq22ot5qu2ec2tm347eao8u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "518787343362-3ieov2n0ki6j928r9cto85vm1hgs3d60.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.asuntosuomi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

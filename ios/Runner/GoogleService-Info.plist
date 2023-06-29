@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>518787343362-3ieov2n0ki6j928r9cto85vm1hgs3d60.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.518787343362-3ieov2n0ki6j928r9cto85vm1hgs3d60</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAJ1e9r7YM6ub8T4mE9QOE3indiAGhqK9A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>518787343362</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.asuntosuomi</string>
+	<key>PROJECT_ID</key>
+	<string>asuntosuomi-d1599</string>
+	<key>STORAGE_BUCKET</key>
+	<string>asuntosuomi-d1599.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:518787343362:ios:14130e5b6a3aaee2fff31b</string>
+</dict>
+</plist>
